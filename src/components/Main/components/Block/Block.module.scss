@@ -1,0 +1,109 @@
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 100%;
+        transition: 1s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+.item-1 {
+    grid-area: item1;
+
+    .content {
+        height: 100px;
+        width: 700px;
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
+        background: rgba(255, 255, 255, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.item-2 {
+    grid-area: item2;
+}
+
+.item-3 {
+    grid-area: item3;
+}
+
+.item-4 {
+    grid-area: item4;
+}
+
+.item-5 {
+    grid-area: item5;
+}
+
+.item-6 {
+    grid-area: item6;
+
+    .content {
+        height: 100px;
+        width: 700px;
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        background: rgba(255, 255, 255, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.loading {
+    // background: linear-gradient(101.42deg, #DFEFFF -0.04%, rgba(223, 239, 255, 0.27) 94.2%);
+    // background: rgb(41, 41, 41);
+    background: linear-gradient(90deg, rgba(152,152,152,1) 0%, rgba(197,197,197,1) 39%, rgba(226,226,226,1) 84%, rgba(255,255,255,1) 100%);
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .content {
+        display: none;
+    }
+}
+
+.loading::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(198,198,198,0.9) 37%, rgba(189,188,188,1) 50%, rgba(203,203,203,0.9) 64%, rgba(255,255,255,0) 100%);
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+
+    to {
+        left: 100%;
+    }
+}

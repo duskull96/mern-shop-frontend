@@ -1,0 +1,21 @@
+.add-to-favorite {
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+    cursor: pointer;
+    user-select: none;
+
+    img {
+        margin: 7px 0 0 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 5px 0px;
+    }
+}

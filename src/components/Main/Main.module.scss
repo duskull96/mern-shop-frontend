@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+
+    .main {
+        width: 80%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: "item1 item1 item2"
+            "item1 item1 item3"
+            "item4 item6 item6"
+            "item5 item6 item6";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 400px);
+        grid-gap: 30px;
+        margin: 30px 0 30px 0;
+
+    }
+}
