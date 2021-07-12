@@ -3,12 +3,11 @@ import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header/Header';
 import Catalog from './components/Catalog/Catalog'
 import Footer from './components/Footer/Footer';
-import './App.css';
 import MainContainer from './components/Main/MainContainer.js';
 
 const App = (props) => {
     return (
-        <div className="App">
+        <div>
             <Header />
             <Switch>
                 <Route exact path='/' component={MainContainer} />
